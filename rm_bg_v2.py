@@ -6,8 +6,6 @@ from tkinter import filedialog as fd
 from tkinter import ttk
 import os
 
-
-
 bg = 'orange' ; fg = "#4f4646" ; button_bg = "#ffb303" ; abg = '#806b71'
 afg = '#3b2e70' ; fnt = 'gisha' ; fnt_size = '8'
 hi = '1' #buttons height;
@@ -92,9 +90,6 @@ title_bar.bind("<B1-Motion>", move_app)
 title_label = Label(title_bar, bg=bg, fg='#f00')
 title_label.pack()
 
-
-
-
 frame = Frame(root)
 frame.pack()
 img = ImageTk.PhotoImage(PIL.Image.open(before_img))
@@ -102,14 +97,9 @@ label = Label(frame, image = img)
 label.image = img
 label.pack(side=LEFT)
 
-
-
 top_frame = Frame(root)
 top_frame.pack(side=BOTTOM, pady=2)
 top_frame.configure(bg = bg)
-
-#top_label = Label(top_frame, text="Background Remover", font=(fnt,'18'), fg="black", bg = label_bg)
-#top_label.grid(row = 0, column = 0, columnspan = 3)
 
 open_button = Button(top_frame,text='Open Image', font=(fnt,fnt_size), fg=fg, bg=button_bg, activebackground = abg,
 activeforeground = afg, height = hi, width = wid, command=select_file)
